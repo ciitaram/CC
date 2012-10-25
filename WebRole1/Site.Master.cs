@@ -69,5 +69,40 @@ namespace WebRole1
         {
 
         }
+
+        protected void OnClickRegister(object sender, EventArgs e)
+        {
+            // Redirect
+            Response.Redirect("~/Account/Register.aspx");
+        }
+
+        protected void OnLoadLoginLogoutButton(object sender, EventArgs e)
+        {
+            // Cookie available?
+            if (Request.Cookies["bwcc_username"] != null)
+                ce_button_loginLogout.Text = "Logout";
+            else
+                ce_button_loginLogout.Text = "Login";
+        }
+
+        protected void OnClickLoginLogoutButton(Object sender, EventArgs e)
+        {
+            // Login?
+            if (ce_button_loginLogout.Text == "Login")
+                Response.Redirect("~/Account/Login.aspx");
+            else
+            {
+                // Destroy cookie
+                if (Request.Cookies["bwcc_username"] != null)
+                {
+                    HttpCookie c = new HttpCookie("bwcc_username");
+                    c.Expires = DateTime.Now.AddDays(-1D);
+                    Response.Cookies.Add(c);
+                }
+
+                // Redirect to main page
+                Response.Redirect("~/default.aspx");
+            }
+        }
     }
 }

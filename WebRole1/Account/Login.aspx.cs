@@ -37,10 +37,11 @@ namespace WebRole1.Account
             // Correct?
             if (System.Web.Security.Membership.ValidateUser(user, pass))
             {
-                // Set cookie
-                HttpCookie c = new HttpCookie("bwcc_username");
-                c.Value = user;
-                c.Expires = DateTime.Now.AddMinutes(1);
+                // Set cookie (safe login?)
+                HttpCookie c    = new HttpCookie("bwcc_username");
+                c.Value         = user;
+                if(ce_login_user.RememberMeSet)
+                    c.Expires   =  DateTime.Now.AddDays(7);
                 Response.Cookies.Add(c);
 
                 // Mark
@@ -49,7 +50,7 @@ namespace WebRole1.Account
             else
             {
                 e.Authenticated = false;
-                ce_login_user.FailureText = "Benutzername oder Password ist falsch!";
+                ce_login_user.FailureText = "The combination of the username and password does not exist!";
             }
         }
     }
