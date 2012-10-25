@@ -14,11 +14,13 @@
       <Site name="Web">
         <Bindings>
           <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="Endpoint2" endpointName="SSL" />
         </Bindings>
       </Site>
     </Sites>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InputEndpoint name="SSL" protocol="https" port="443" certificate="SSL" />
     </Endpoints>
     <Imports>
       <Import moduleName="Diagnostics" />
@@ -26,5 +28,8 @@
     <ConfigurationSettings>
       <Setting name="DataConnectionString" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SSL" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
   </WebRole>
 </ServiceDefinition>

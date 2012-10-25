@@ -40,6 +40,7 @@
     <Site name="Web" physicalDirectory="E:\Programming\C#\Cloud\CC\CC\obj\Release\WebRole1\">
       <Bindings>
         <Binding name="Endpoint1" endpointName="Endpoint1" />
+        <Binding name="Endpoint2" endpointName="SSL" />
       </Bindings>
     </Site>
   </Sites>

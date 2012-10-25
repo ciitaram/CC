@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebRole1
 {
-    public partial class _Default : Page
+    public partial class _Default : HttpPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
