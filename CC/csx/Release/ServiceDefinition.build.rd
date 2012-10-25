@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CC" generation="1" functional="0" release="0" Id="a436b677-3741-444a-9f65-c9dfa5df8623" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CC" generation="1" functional="0" release="0" Id="59770790-8418-4512-b7dc-408542384c28" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="CCGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -114,14 +114,14 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="19fdf4c5-3647-497f-891b-eb04e3355999" ref="Microsoft.RedDog.Contract\ServiceContract\CCContract@ServiceDefinition.build">
+    <implementation Id="03a3b844-bc8a-4fc3-bec5-8721da932376" ref="Microsoft.RedDog.Contract\ServiceContract\CCContract@ServiceDefinition.build">
       <interfacereferences>
-        <interfaceReference Id="6be05f85-e451-484f-81cf-4538d04479ab" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition.build">
+        <interfaceReference Id="d3184347-6297-4b0a-b06e-b892fe4e680b" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/CC/CCGroup/WebRole1:Endpoint1" />
           </inPort>
         </interfaceReference>
-        <interfaceReference Id="8c266785-8595-4106-89b4-7f3fc21ea4b6" ref="Microsoft.RedDog.Contract\Interface\WebRole1:SSL@ServiceDefinition.build">
+        <interfaceReference Id="bc745dfe-9611-41a2-a24a-85d75e767e0a" ref="Microsoft.RedDog.Contract\Interface\WebRole1:SSL@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/CC/CCGroup/WebRole1:SSL" />
           </inPort>
