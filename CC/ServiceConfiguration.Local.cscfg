@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CC" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2012-05.1.7">
+  <Role name="WebRole1">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=bwcc;AccountKey=cqZwKMJN/jr7rEFMNbm4XLyLD/Jc9heOjraT/GyPQXelyD4+iKH3zOGR+Uvup2aV5uc2Yo4LM6+O7Z8Wgs9m3g==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
