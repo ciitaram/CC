@@ -3,5 +3,6 @@
   <PropertyGroup>
     <ActivePublishProfile>bwccProduction</ActivePublishProfile>
     <DeploymentPromptBeforeUpgrading>False</DeploymentPromptBeforeUpgrading>
+    <DeploymentPromptBeforeDeleting>False</DeploymentPromptBeforeDeleting>
   </PropertyGroup>
 </Project>

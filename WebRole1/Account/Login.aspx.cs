@@ -20,5 +20,37 @@ namespace WebRole1.Account
                 RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
             }
         }
+
+        protected void OnAuthenticate(Object sender, AuthenticateEventArgs e)
+        {
+            // Valid page?
+            if (Page.IsValid == false)
+            {
+                e.Authenticated = false;
+                return;
+            }
+
+            // Get username and password
+            string user = ce_login_user.UserName;
+            string pass = ce_login_user.Password;
+
+            // Correct?
+            if (System.Web.Security.Membership.ValidateUser(user, pass))
+            {
+                // Set cookie
+                HttpCookie c = new HttpCookie("bwcc_username");
+                c.Value = user;
+                c.Expires = DateTime.Now.AddMinutes(1);
+                Response.Cookies.Add(c);
+
+                // Mark
+                e.Authenticated = true;
+            }
+            else
+            {
+                e.Authenticated = false;
+                ce_login_user.FailureText = "Benutzername oder Password ist falsch!";
+            }
+        }
     }
 }

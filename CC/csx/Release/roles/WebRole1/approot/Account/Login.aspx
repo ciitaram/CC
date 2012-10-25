@@ -7,7 +7,7 @@
     </hgroup>
     <section id="loginForm">
         <h2>Lokales Konto für die Anmeldung verwenden.</h2>
-        <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">
+        <asp:Login ID="ce_login_user" runat="server" ViewStateMode="Disabled" RenderOuterTable="false" OnAuthenticate="OnAuthenticate">
             <LayoutTemplate>
                 <p class="validation-summary-errors">
                     <asp:Literal runat="server" ID="FailureText" />
