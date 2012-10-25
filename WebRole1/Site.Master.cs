@@ -80,9 +80,21 @@ namespace WebRole1
         {
             // Cookie available?
             if (Request.Cookies["bwcc_username"] != null)
+            {
+                // Rename button
                 ce_button_loginLogout.Text = "Logout";
+
+                // Set label text
+                ce_label_welcome_user.Text = "Welcome, " + Request.Cookies["bwcc_username"].Value + " ";
+            }
             else
+            {
+                // Rename button
                 ce_button_loginLogout.Text = "Login";
+
+                // Set label text
+                ce_label_welcome_user.Text = "Welcome, guest ";
+            }
         }
 
         protected void OnClickLoginLogoutButton(Object sender, EventArgs e)

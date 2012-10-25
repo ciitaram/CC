@@ -29,26 +29,9 @@
             </div>
             <div class="float-right">
                 <section id="login">
-                    <asp:Button ID="ce_button_register" runat="server" OnClick="OnClickRegister"/>
+                    <asp:Label ID="ce_label_welcome_user" runat="server" Text=""></asp:Label>
+                    <asp:Button ID="ce_button_register" Text="Register" runat="server" OnClick="OnClickRegister"/>
                     <asp:Button ID="ce_button_loginLogout" runat="server" OnLoad="OnLoadLoginLogoutButton" OnClick="OnClickLoginLogoutButton"/>
-                    <a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a>
-                    <a id="loginLink" runat="server" href="~/Account/Login.aspx">Anmelden</a>
-                    <!--<asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Anmelden</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" />
-                                </a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Abmelden" LogoutPageUrl="~/" />
-                            </p>
-                        </LoggedInTemplate>
-                    </asp:LoginView> -->
                 </section>
                 <nav>
                     <ul id="menu">
