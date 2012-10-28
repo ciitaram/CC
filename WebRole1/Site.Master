@@ -30,8 +30,8 @@
             <div class="float-right">
                 <section id="login">
                     <asp:Label ID="ce_label_welcome_user" runat="server" Text=""></asp:Label>
-                    <asp:Button ID="ce_button_register" Text="Register" runat="server" OnClick="OnClickRegister"/>
-                    <asp:Button ID="ce_button_loginLogout" runat="server" OnLoad="OnLoadLoginLogoutButton" OnClick="OnClickLoginLogoutButton"/>
+                    <asp:Button ID="ce_button_register" Text="Register" runat="server" OnClick="OnClickRegister" CausesValidation="false"/>
+                    <asp:Button ID="ce_button_loginLogout" runat="server" OnLoad="OnLoadLoginLogoutButton" OnClick="OnClickLoginLogoutButton" CausesValidation="false"/>
                 </section>
                 <nav>
                     <ul id="menu">

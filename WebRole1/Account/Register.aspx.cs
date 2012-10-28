@@ -9,7 +9,7 @@ using Microsoft.AspNet.Membership.OpenAuth;
 
 namespace WebRole1.Account
 {
-    public partial class Register : HttpsPage
+    public partial class Register : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
