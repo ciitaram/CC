@@ -40,6 +40,7 @@ namespace WebRole1.Account
                 // Set cookie (safe login?)
                 HttpCookie c    = new HttpCookie("bwcc_username");
                 c.Value         = user;
+                c.Secure        = false;
                 if(ce_login_user.RememberMeSet)
                     c.Expires   =  DateTime.Now.AddDays(7);
                 Response.Cookies.Add(c);
