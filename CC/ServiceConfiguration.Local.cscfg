@@ -4,7 +4,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=bwcc;AccountKey=cqZwKMJN/jr7rEFMNbm4XLyLD/Jc9heOjraT/GyPQXelyD4+iKH3zOGR+Uvup2aV5uc2Yo4LM6+O7Z8Wgs9m3g==" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=bwcc;AccountKey=0CS+QUnyX1dRrRq52eqL1JWf/ygBpMx0cYYSSZuJsJaJ2NWMH/b5gCyJs0FygvnK+hxBxvEqBiRlx/plRrdnow==" />
     </ConfigurationSettings>
     <Certificates>
       <Certificate name="SSL" thumbprint="B45BE92646CD9029787C6F4FC0821F579213C917" thumbprintAlgorithm="sha1" />
